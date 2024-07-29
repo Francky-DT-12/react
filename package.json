@@ -1,0 +1,29 @@
+{
+  "name": "projet-groupe-sia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "migrate": "npx prisma migrate dev --name init",
+    "client": "npm start --prefix app",
+    "server": "nodemon serveur.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.16.1",
+    "body-parser": "^1.20.2",
+    "concurrently": "^8.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.4",
+    "websocket": "^1.0.35",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "prisma": "^5.16.1"
+  }
+}
